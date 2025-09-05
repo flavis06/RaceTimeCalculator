@@ -142,6 +142,6 @@ if (document.querySelector("input[name='sesso1']:checked").value=="male") {
 k = 1.123;
 }
 else {
-k = 1.08;
+k = 1.06;
 }
 }
