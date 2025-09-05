@@ -60,10 +60,10 @@ function ConvertiTempiInStandard(t2) {
 	let secondi = Math.trunc(100*(t2 - 3600*ore - 60*minuti))*0.01;
 	let minutiCorretto = minuti;
 	let secondiCorretto = secondi.toFixed(2);
-	if (minuti < 10) {
+	if (minuti < 10 && ore != 0) {
 		minutiCorretto = "0" + minuti;
 	}
-	if (secondi < 10) {
+	if (secondi < 10 && (minuti !=0 || ore != 0)) {
 		secondiCorretto = "0" + secondi.toFixed(2);
 	}
 	let tempoStandard = ore + ":" + minutiCorretto + ":" + secondiCorretto;
@@ -73,7 +73,7 @@ function ConvertiTempiInStandard(t2) {
 	if (ore == 0 && minuti < 10) {
 		tempoStandard = minuti + ":" + secondiCorretto;
 	}
-	if (minuti == 0) {
+	if (minuti == 0 && ore==0) {
 		tempoStandard = secondiCorretto;
 	}
 	return tempoStandard;
