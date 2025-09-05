@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<title>Calcolatore tempi gara</title>
+<link href="fogliodistile.css" rel="stylesheet">
+</head>
+<body>
+<h1>Calcolatore tempi gara</h1>
+<h2>Calcolatore con formula</h2>
+<p class="descrizione">Inserire nella tabella la distanza di gara corsa e il tempo impiegato. Il risultato per ogni distanza è una <b>stima del tempo ideale</b> 
+ottenbile allenandosi specificatamente per la suddetta distanza. Il tempo è ottenuto attraverso la seguente formula: (d2/d1)^k*t1, 
+in cui d1 e t1 sono rispettivamente la distanza corsa e il tempo impiegato a percorrerla, d2 è la distanza su cui è effettuata la previsione e k è una costante che vale 1.123 per gli uomini e 1.050 per le donne.</p>
+<table>
+<thead>
+<tr><th>Distanza (metri)</th><th>Tempo (ore:minuti:secondi)</th></tr>
+</thead>
+<tbody>
+<tr><td><input type="text" id= "d1" ></td><td><input type="text" id= "t1"></td></tr>
+</tbody>
+</table>
+<div class="spuntaSesso">
+<input type="radio" value="male" name="sesso1" checked="checked">Maschio</input><input type="radio" value="female" name="sesso1">Femmina</input>
+<button onclick="calcolaTempi()">Calcola</button>
+</div>
+<br>
+<table>
+<thead>
+<tr><th colspan="2">Risultato</th></tr>
+</thead>
+<tbody>
+<tr id="100"><td>100m</td><td></td></tr>
+<tr id="200"><td>200m</td><td></td></tr>
+<tr id="400"><td>400m</td><td></td></tr>
+<tr id="800"><td>800m</td><td></td></tr>
+<tr id="1000"><td>1000m</td><td></td></tr>
+<tr id="1500"><td>1500m</td><td></td></tr>
+<tr id="3000"><td>3000m</td><td></td></tr>
+<tr id="5000"><td>5000m</td><td></td></tr>
+<tr id="10000"><td>10000m</td><td></td></tr>
+</tbody>
+</table>
+<br>
+<h2>Calcolatore come percentuale del record del mondo</h2>
+<p class="descrizione">Selezionare la distanza e inserire il tempo impiegato. Il calcolatore esprimerà il potenziale tempo ottenibile su ciascuna distanza sulla base della percentuale del record del mondo a cui il tempo inserito equivale.</p>
+<table>
+<thead>
+<tr><th>Distanza (metri)</th><th>Tempo (ore:minuti:secondi)</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><select id="distanza" name="distanza">
+<option value="100m" select="selected">100m</option>
+<option value="200m">200m</option>
+<option value="400m">400m</option>
+<option value="800m">800m</option>
+<option value="1000m">1000m</option>
+<option value="1500m">1500m</option>
+<option value="3000m">3000m</option>
+<option value="5000m">5000m</option>
+<option value="10000m">10000m</option>
+</select></td>
+<td><input type="text" id= "tempo"></td></tr>
+</tbody>
+</table>
+<div class="spuntaSesso">
+<input type="radio" value="male" name="sesso2" checked="checked">Maschio</input><input type="radio" value="female" name="sesso2">Femmina</input>
+</div>
+<div class="illustrazione"><button onclick="calcolaTempiConRecord()">Calcola</button><p id="percentualeRecord">Percentuale del record del mondo:</p>
+</div>
+<br>
+<table>
+<thead>
+<tr><th colspan="2">Risultato</th></tr>
+</thead>
+<tbody>
+<tr id="100m"><td>100m</td><td></td></tr>
+<tr id="200m"><td>200m</td><td></td></tr>
+<tr id="400m"><td>400m</td><td></td></tr>
+<tr id="800m"><td>800m</td><td></td></tr>
+<tr id="1000m"><td>1000m</td><td></td></tr>
+<tr id="1500m"><td>1500m</td><td></td></tr>
+<tr id="3000m"><td>3000m</td><td></td></tr>
+<tr id="5000m"><td>5000m</td><td></td></tr>
+<tr id="10000m"><td>10000m</td><td></td></tr>
+</tbody>
+</table>
+<script src="ScriptTempi.js"></script>
+
+</body>
+</html>

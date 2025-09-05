@@ -1,0 +1,65 @@
+body {
+background: #5c8cb5;
+color: white;
+text-align: center;
+}
+h1 {
+color: black;
+font: 36px "Times New Roman", sans-serif;
+}
+p.descrizione {
+margin-left: 100px;
+margin-right: 100px;
+}
+div.spuntaSesso {
+background-color: #aec1d1;
+width: 358px;
+margin-left: auto; 
+margin-right: auto;
+border: 1px solid black;
+padding: 5px;
+}
+div.illustrazione { 
+background-color: #aec1d1; 
+width: 358px; 
+margin-left: auto; 
+margin-right: auto; 
+border: 1px solid black; 
+padding: 5px; 
+}
+button {
+padding: 5px;
+margin-left: auto; 
+margin-right: auto;
+position: relative;
+right: -30px;
+border: 1px solid black;
+}
+
+button:hover {
+background-color: #a0c8eb;
+}
+table {
+background-color: #aec1d1;
+width: 370px;
+margin-left: auto; 
+margin-right: auto;
+text-align: center;
+table-layout: fixed;
+border-collapse: collapse;
+color: black;
+empty-cells: show;
+}
+td, th {
+border: 1px solid black;
+padding: 5px;
+}
+input {
+width: 80%
+}
+input:hover {
+background-color: #a0c8eb;
+}
+input:focus {
+background-color: white;
+}
