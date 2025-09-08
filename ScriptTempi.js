@@ -7,7 +7,7 @@ let distances = [100, 200, 400, 800, 1000, 1500, 3000, 5000, 10000,];
 function preliminaryChecks(timeCheck, distanceCheck) {
 let control = true;
 let allowedTimeValue = function(timeCheck) {
-	if (timeCheck.includes(" ") || !(isFinite(Number(timeCheck.replaceAll(":", "1").replaceAll(".", "1"))))) {
+	if (timeCheck.includes(" ") || !((isFinite(Number(timeCheck.replaceAll(":", "1").replaceAll(".", "1")))) && Number(timeCheck.replaceAll(":", "1").replaceAll(".", "1"))>0 )) {
 		alert("Inserire un valore di tempo valido.");
 		control = false;
 	}
